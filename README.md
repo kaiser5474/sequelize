@@ -19,8 +19,6 @@ reaction.type = "Laugh"
 }
 });
 
-## SEQUELIZE
-
 ### For select column with as in attributes
 
 spanish is the name of the column in database and values is the new name
