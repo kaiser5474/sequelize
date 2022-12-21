@@ -1,4 +1,4 @@
-# sequelize
+# Sequelize
 
 ```javascript
 Post.findAll({
