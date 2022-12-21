@@ -26,10 +26,9 @@ attributes: ["id", ["spanish", "value"], "tag"],
 ### For change name primary key
 
 ```javascript
-id:
-{
-type: DataTypes.INTEGER,
-primaryKey: true, //this is for creater primary key
-autoIncrement: true,
+id: {
+  type: DataTypes.INTEGER,
+  primaryKey: true, //this is for creater primary key
+  autoIncrement: true,
 },
 ```
