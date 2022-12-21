@@ -1,23 +1,17 @@
 # sequelize
 
+```javascript
 Post.findAll({
 attributes: {
-include: [
-[
-// Note the wrapping parentheses in the call below!
-sequelize.literal(`(
-SELECT COUNT(*)
-FROM reactions AS reaction
-WHERE
-reaction.postId = post.id
-AND
-reaction.type = "Laugh"
-)`),
-'laughReactionsCount'
+  include: [
+  [
+  // Note the wrapping parentheses in the call below!
+  sequelize.literal(`(SELECT COUNT(*) FROM reactions AS reaction WHERE reaction.postId = post.id AND reaction.type = "Laugh" )`), 'laughReactionsCount'
 ]
 ]
 }
 });
+```
 
 ### For select column with as in attributes
 
