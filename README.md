@@ -4,11 +4,11 @@
 Post.findAll({
 attributes: {
   include: [
-  [
-  // Note the wrapping parentheses in the call below!
-  sequelize.literal(`(SELECT COUNT(*) FROM reactions AS reaction WHERE reaction.postId = post.id AND reaction.type = "Laugh" )`), 'laughReactionsCount'
-]
-]
+    [
+    // Note the wrapping parentheses in the call below!
+    sequelize.literal(`(SELECT COUNT(*) FROM reactions AS reaction WHERE reaction.postId = post.id AND reaction.type = "Laugh" )`), 'laughReactionsCount'
+    ]
+  ]
 }
 });
 ```
@@ -18,7 +18,10 @@ attributes: {
 spanish is the name of the column in database and values is the new name
 this is like
 Select id, spanish as values, tag from ...
+
+```javascript
 attributes: ["id", ["spanish", "value"], "tag"],
+```
 
 ### For change name primary key
 
