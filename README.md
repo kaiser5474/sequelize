@@ -8,7 +8,7 @@ attributes: {
   include: [
     [
     // Note the wrapping parentheses in the call below!
-    sequelize.literal(`(SELECT COUNT(*) FROM reactions AS reaction WHERE reaction.postId = post.id AND reaction.type = "Laugh" )`), 'laughReactionsCount'
+    sequelize.literal(`(SELECT COUNT(*) FROM reactions WHERE reaction.postId = post.id AND reaction.type = "Laugh" )`), 'laughReactionsCount'
     ]
   ]
 }
