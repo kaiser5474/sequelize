@@ -34,3 +34,13 @@ id: {
   autoIncrement: true,
 },
 ```
+## Allow Null
+
+Allow null for defaul is true, for change
+
+```javascript
+user_name: {
+  type: DataTypes.STRING(100), 
+  allowNull: false, //we need to do this
+},
+```
