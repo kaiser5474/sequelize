@@ -1,5 +1,7 @@
 # Sequelize
 
+## Inyect consult
+
 ```javascript
 Post.findAll({
 attributes: {
